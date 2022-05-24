@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyAppBootCamp</string>
+    <string name="imdb">IMDb</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Login</string>
+    <string name="ForgetPassWord">¿Olvidaste la contraseña?</string>
+    <string name="otherLogin">O podes ingresar con</string>
+    <string name="notAccount">¿No tenes cuenta? Registrate</string>
+    <string name="guest">Continuar como invitado</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_box">50dp</dimen>
+    <dimen name="margin_icon">100dp</dimen>
+    <dimen name="min_height_box">48dp</dimen>
+</resources>
