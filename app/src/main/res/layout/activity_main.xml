@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@id/boxPassWord"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -103,41 +103,41 @@
         app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="MissingConstraints,UnknownId,TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_width="49dp"
-        android:layout_height="29dp"
+    <androidx.appcompat.widget.AppCompatButton
+
+    android:id="@+id/img1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/border_icon"
+        android:background="@drawable/border_icon_apple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.45"
-        android:src="@drawable/ic_apple"
         android:layout_marginStart="@dimen/margin_icon"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatButton
+
         android:id="@+id/img2"
-        android:layout_width="49dp"
-        android:layout_height="29dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="32dp"
-        android:src="@drawable/ic_facebook"
-        android:background="@drawable/border_icon"
+        android:background="@drawable/border_icon_fb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img3"
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.463"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatButton
+
         android:id="@+id/img3"
-        android:layout_width="49dp"
-        android:layout_height="29dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="100dp"
-        android:src="@drawable/ic_google"
-        android:background="@drawable/border_icon"
+        android:background="@drawable/border_icon_go"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
