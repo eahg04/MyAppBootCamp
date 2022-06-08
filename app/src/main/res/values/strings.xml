@@ -8,4 +8,20 @@
     <string name="otherLogin">O podes ingresar con</string>
     <string name="notAccount">¿No tenes cuenta? Registrate</string>
     <string name="guest">Continuar como invitado</string>
+    <string name="todo">TODO</string>
+    <string name="name">Nombre</string>
+    <string name="mail">Correo electronico</string>
+    <string name="ok">Aceptar</string>
+    <string name="createAccount">Crear una cuenta</string>
+    <string name="required">todos los campos son requeridos</string>
+    <string name="home">Inicio</string>
+    <string name="search">Buscar</string>
+    <string name="play">Play</string>
+    <string name="profile">Perfil</string>
+    <string name="goodSelect">Las mejores selecciones</string>
+    <string name="searchMovie">Buscar IMDb </string>
+    <string name="batman">The Batman</string>
+    <string name="trailer">Trailer Oficial</string>
+    <string name="titleStranger">Stranger Things</string>
+    <string name="category">accion</string>
 </resources>

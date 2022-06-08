@@ -30,7 +30,7 @@
         android:layout_marginStart="@dimen/margin_box"
         android:layout_marginEnd="@dimen/margin_box"
         android:autofillHints=""
-        android:background="@drawable/user_info"
+        android:background="@drawable/box_user_info"
         android:hint="@string/user"
         android:inputType="textEmailAddress"
         android:textColor="@color/grey"
@@ -40,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:errorEnabled="true"
         app:layout_constraintVertical_bias="0.15"
         tools:ignore="LabelFor,TextContrastCheck" />
 
@@ -50,33 +51,34 @@
         android:layout_marginStart="@dimen/margin_box"
         android:layout_marginEnd="@dimen/margin_box"
         android:autofillHints=""
-        android:background="@drawable/user_info"
+        android:background="@drawable/box_user_info"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColor="@color/grey"
         android:minHeight="@dimen/min_height_box"
+        android:textColor="@color/grey"
         android:textColorHint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boxUser"
+        app:errorEnabled="true"
         app:layout_constraintVertical_bias="0.121"
-        tools:ignore="LabelFor,TextFields" />
+        tools:ignore="LabelFor,TextFields,TextContrastCheck" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:hint="@string/ForgetPassWord"
         android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/boxPassWord"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_box"
@@ -90,8 +92,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boxPassWord"
-        app:layout_constraintVertical_bias="0.152"
-        tools:ignore="MissingConstraints,UnknownId" />
+        app:layout_constraintVertical_bias="0.150"
+        tools:ignore="MissingConstraints,UnknownId,TextContrastCheck" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,55 +102,55 @@
         app:layout_constraintBottom_toTopOf="@+id/img2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         tools:ignore="MissingConstraints,UnknownId,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
 
-    android:id="@+id/img1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
+        android:id="@+id/img1"
+        android:layout_width="@dimen/margin_box"
+        android:layout_height="@dimen/margin_box"
+        android:layout_marginStart="@dimen/margin_icon"
+        android:layout_marginEnd="@dimen/margin_icon_text"
         android:background="@drawable/border_icon_apple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.45"
-        android:layout_marginStart="@dimen/margin_icon"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
 
         android:id="@+id/img2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="@dimen/margin_box"
+        android:layout_height="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_icon_text"
         android:background="@drawable/border_icon_fb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/img3"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.463"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-
         android:id="@+id/img3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="@dimen/margin_box"
+        android:layout_height="@dimen/margin_box"
+        android:layout_marginEnd="@dimen/margin_icon"
         android:background="@drawable/border_icon_go"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.462"
-        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,ImageContrastCheck" />
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck,ImageContrastCheck,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textNotAccount"
+        android:id="@+id/txtRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/notAccount"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -165,7 +167,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNotAccount"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegister"
         app:layout_constraintVertical_bias="0.3"
         tools:ignore="MissingConstraints,TextContrastCheck" />
 

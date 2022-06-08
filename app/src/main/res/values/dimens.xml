@@ -3,4 +3,7 @@
     <dimen name="margin_box">50dp</dimen>
     <dimen name="margin_icon">100dp</dimen>
     <dimen name="min_height_box">48dp</dimen>
+    <dimen name="margin_icon_text">30dp</dimen>
+    <dimen name="margin_text">70dp</dimen>
+    <dimen name="widhtToolBar">30dp</dimen>
 </resources>

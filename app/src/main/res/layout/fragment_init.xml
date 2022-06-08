@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InitFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widhtToolBar"
+        android:background="@color/yellow"/>
+
+    <ImageView
+        android:id="@+id/playImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription"
+        android:background="@drawable/img_play"
+        />
+
+
+
+    <TextView
+        android:id="@+id/titleMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titleStranger"
+        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/margin_text"
+        app:layout_constraintTop_toBottomOf="@+id/playImg" />
+
+    <TextView
+        android:id="@+id/txTrailer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/trailer"
+        android:textColor="@color/black"
+        android:textAlignment="textEnd"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/margin_text"
+        app:layout_constraintTop_toBottomOf="@+id/titleMovie" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_icon_text"
+        android:layout_marginTop="@dimen/margin_icon_text"
+        android:text="@string/goodSelect"
+        android:textColor="@color/black"
+        android:layout_marginEnd="@dimen/margin_text"
+        app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewInit"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_box"
+        android:layout_marginStart="@dimen/margin_icon_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+</LinearLayout>

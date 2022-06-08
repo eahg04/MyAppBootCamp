@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAppBootCamp">
-
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
