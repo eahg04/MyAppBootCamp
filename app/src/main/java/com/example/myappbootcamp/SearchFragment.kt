@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myappbootcamp.adapter.MoviesAdapter
 import com.example.myappbootcamp.databinding.FragmentSearchBinding
 
@@ -30,7 +28,7 @@ class SearchFragment : Fragment() {
         showMovies(listMovies.moviesList)
     }
 
-    fun showMovies(listMovies: List<Movies>) {
+    private fun showMovies(listMovies: List<Movies>) {
         moviesAdapter = MoviesAdapter(listMovies) { movies ->
         }
         binding.recyclerView.adapter = moviesAdapter

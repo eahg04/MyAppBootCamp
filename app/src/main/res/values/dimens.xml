@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_box">50dp</dimen>
-    <dimen name="margin_icon">100dp</dimen>
-    <dimen name="min_height_box">48dp</dimen>
-    <dimen name="margin_icon_text">30dp</dimen>
-    <dimen name="margin_text">70dp</dimen>
-    <dimen name="widhtToolBar">30dp</dimen>
+    //sizes margins
+    <dimen name="sz5">5dp</dimen>
+    <dimen name="sz10">10dp</dimen>
+    <dimen name="sz15">15dp</dimen>
+    <dimen name="sz20">20dp</dimen>
+    <dimen name="sz25">25dp</dimen>
+    <dimen name="sz30">30dp</dimen>
+    <dimen name="sz35">35dp</dimen>
+    <dimen name="sz40">40dp</dimen>
+    <dimen name="sz45">45dp</dimen>
+    <dimen name="sz48">48dp</dimen>
+    <dimen name="sz50">50dp</dimen>
+    <dimen name="sz55">55dp</dimen>
+    <dimen name="sz60">60dp</dimen>
+    <dimen name="sz100">100dp</dimen>
+    <dimen name="sz120">120dp</dimen>
+
+    <!--dimens container and images-->
+    <dimen name="width_logo_imdb_main">200dp</dimen>
+    <dimen name="height_logo_imdb_main">100dp</dimen>
+    <dimen name="width_img_item_movie">120dp</dimen>
+    <dimen name="height_img_item_movie">120dp</dimen>
+    <dimen name="view_box_init">320dp</dimen>
+    <dimen name="height_container_init_fragment">662dp</dimen>
+    <dimen name="height_recycler_search">500dp</dimen>
+    <dimen name="height_recycler_profile">160dp</dimen>
+    <dimen name="margin_top_item_text">76dp</dimen>
+    <dimen name="width_card_recycler_profile">150dp</dimen>
+    <dimen name="height_card_recycler_profile">125dp</dimen>
+
+    <!--size text-->
+    <dimen name="text15">15sp</dimen>
+    <dimen name="text25">25sp</dimen>
+    <dimen name="text18">18sp</dimen>
+    <dimen name="text20">20sp</dimen>
+
+
 </resources>

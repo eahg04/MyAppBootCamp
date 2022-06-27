@@ -1,69 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_smoke"
     android:orientation="vertical"
     tools:context=".InitFragment">
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/widhtToolBar"
-        android:background="@color/yellow"/>
+        android:layout_height="@dimen/sz30"
+        android:background="@color/yellow"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/playImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="ContentDescription"
         android:background="@drawable/img_play"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        tools:ignore="ContentDescription,MissingConstraints" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz60"
+        android:contentDescription="@string/icon_play_movie"
+        android:src="@drawable/ic_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/playImg" />
+
+    <ImageView
+        android:id="@+id/image_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sz10"
+        android:contentDescription="@string/imgOver"
+        android:src="@drawable/img_over"
+        app:layout_constraintBottom_toTopOf="@id/bestSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
 
     <TextView
         android:id="@+id/titleMovie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sz100"
+        android:layout_marginTop="@dimen/sz20"
+        android:layout_marginEnd="@dimen/sz60"
+        android:fontFamily="@font/bold"
         android:text="@string/titleStranger"
-        android:textColor="@color/black"
         android:textAlignment="textEnd"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="@dimen/margin_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playImg" />
 
     <TextView
-        android:id="@+id/txTrailer"
+        android:id="@+id/tvTrailer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz15"
+        android:layout_marginEnd="@dimen/sz100"
         android:text="@string/trailer"
-        android:textColor="@color/black"
         android:textAlignment="textEnd"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="@dimen/margin_text"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleMovie" />
 
-    <TextView
+    <View
         android:layout_width="match_parent"
+        android:layout_height="@dimen/view_box_init"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTrailer"
+        />
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_icon_text"
-        android:layout_marginTop="@dimen/margin_icon_text"
+        android:layout_marginTop="@dimen/margin_top_item_text"
+        android:background="@drawable/item_text"
+        app:layout_constraintEnd_toStartOf="@id/bestSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_over" />
+
+    <TextView
+        android:id="@+id/bestSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
         android:text="@string/goodSelect"
         android:textColor="@color/black"
-        android:layout_marginEnd="@dimen/margin_text"
-        app:layout_constraintTop_toBottomOf="@+id/titleMovie"
+        android:textSize="@dimen/text20"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewInit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_text"
+        app:layout_constraintTop_toBottomOf="@id/tvTrailer"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewInit"
-        android:layout_width="150dp"
-        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz10"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/margin_box"
-        android:layout_marginStart="@dimen/margin_icon_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleMovie"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bestSelect"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_recycler_init" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,4 +24,23 @@
     <string name="trailer">Trailer Oficial</string>
     <string name="titleStranger">Stranger Things</string>
     <string name="category">accion</string>
+    <string name="calification">4.5</string>
+    <string name="name_profile">Juan perez</string>
+    <string name="text_list_tracing">Lista de seguimiento</string>
+    <string name="text_content_list">Crea una lista de seguimiento para no perderte</string>
+    <string name="text_content2_list">ninguna pelicula o serie de tv.</string>
+    <string name="btn_list">Empieza tu lista de seguimiento</string>
+    <string name="views_recents">Vistas recientes</string>
+    <string name="not_visit_page">No has visitado ninguna pagina recientemente</string>
+    <string name="settings">settings</string>
+    <string name="imgOver">imageOver</string>
+    <string name="icon_play_movie">icon_play_movie</string>
+    <string name="recommendatios">calificar y obtener recomendaciones</string>
+    <string name="ratings">Calificaciones</string>
+    <string name="amount">0</string>
+    <string name="password_min">La contraseña debe contener 8 caracteres</string>
+    <string name="user_not_found">Este usuario no existe</string>
+    <string name="fields_empty">hay que llenar los campos</string>
+    <string name="user_registered">User Registered</string>
+    <string name="user_no_found">user NOT found</string>
 </resources>

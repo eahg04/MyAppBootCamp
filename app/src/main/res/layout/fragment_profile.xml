@@ -1,13 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white_smoke"
     tools:context=".ProfileFragment">
 
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/barProfile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/name" />
+        android:layout_height="@dimen/sz30"
+        android:background="@color/yellow"
+        tools:ignore="MissingConstraints" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/sz60"
+        android:layout_height="@dimen/sz60"
+        android:layout_marginStart="@dimen/sz15"
+        android:layout_marginTop="@dimen/sz30"
+        android:layout_marginBottom="@dimen/sz10"
+        android:src="@drawable/photo_profile"
+        app:layout_constraintTop_toBottomOf="@id/barProfile"
+        app:layout_constraintEnd_toStartOf="@id/tvNameProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints"
+        />
+
+
+    <TextView
+        android:id="@+id/tvNameProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sz15"
+        android:layout_marginTop="@dimen/sz50"
+        android:text="@string/name_profile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/barProfile" />
+
+    <ImageButton
+        android:id="@+id/iconSetting"
+        android:layout_width="@dimen/sz48"
+        android:layout_height="@dimen/sz48"
+        android:layout_marginTop="@dimen/sz45"
+        android:background="@color/white"
+        android:contentDescription="@string/settings"
+        android:src="@drawable/icon_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toEndOf="@id/tvNameProfile"
+        app:layout_constraintTop_toBottomOf="@id/barProfile"
+        tools:ignore="ImageContrastCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerContent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_recycler_profile"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/imgProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/icon_item"
+            android:layout_marginTop="@dimen/sz10"
+            android:layout_marginStart="@dimen/sz10"
+            tools:listitem="@layout/item_options"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+
+    <ImageView
+        android:id="@+id/icon_item"
+        android:layout_width="@dimen/sz50"
+        android:layout_height="@dimen/sz20"
+        android:layout_marginStart="@dimen/sz10"
+        android:src="@drawable/item_text"
+        app:layout_constraintBottom_toBottomOf="@id/textView3"
+        app:layout_constraintEnd_toStartOf="@id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerContent"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_list_tracing"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon_item"
+        app:layout_constraintTop_toBottomOf="@id/recyclerContent"
+        app:layout_constraintVertical_bias="0.099"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz20"
+        android:layout_marginEnd="@dimen/sz20"
+        android:text="@string/text_content_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sz30"
+        android:layout_marginTop="@dimen/sz5"
+        android:text="@string/text_content2_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBeginList"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz25"
+        android:background="@drawable/box_begin_list"
+        android:hint="@string/btn_list"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sz15"
+        android:layout_marginStart="@dimen/sz5"
+        android:layout_marginBottom="@dimen/sz20"
+        android:text="@string/views_recents"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text20"
+        app:layout_constraintTop_toBottomOf="@id/btnBeginList"
+        app:layout_constraintBottom_toTopOf="@id/textView6"
+        app:layout_constraintStart_toEndOf="@id/icon_item2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icon_item2"
+        android:layout_width="@dimen/sz50"
+        android:layout_height="@dimen/sz20"
+        android:layout_marginTop="@dimen/sz15"
+        android:layout_marginStart="@dimen/sz20"
+        android:src="@drawable/item_text"
+        app:layout_constraintTop_toBottomOf="@id/btnBeginList"
+        app:layout_constraintEnd_toStartOf="@id/textView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
+        tools:layout_editor_absoluteY="580dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="@dimen/sz20"
+        android:text="@string/not_visit_page"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon_item2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

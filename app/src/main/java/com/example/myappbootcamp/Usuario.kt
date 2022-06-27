@@ -4,10 +4,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
- data class Usuario (
+data class Usuario(
     @PrimaryKey()
-    val email : String ,
-    val usuario : String ,
-    val password :String
+    val email: String,
+    val usuario: String,
+    val password: String
 
 )

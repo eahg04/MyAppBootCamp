@@ -8,12 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyAppBootCamp">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/RegisActivityTheme"/>
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
